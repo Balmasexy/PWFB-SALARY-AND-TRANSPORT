@@ -1,0 +1,114 @@
+:root{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#1f2937;background:#f3f4f6}*{box-sizing:border-box}body{margin:0;min-width:320px;background:#f3f4f6}.app{min-height:100vh;display:flex;flex-direction:column}.header{background:#fff;border-bottom:1px solid #e5e7eb;position:sticky;top:0;z-index:30;padding:12px 4%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 5px #0000000d}.brand{display:flex;align-items:center;gap:12px}.logo-svg{width:40px;height:40px}.brand strong{display:block;font-size:17px;color:#111827}.brand span{display:block;color:#f58220;font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase}.export{border:0;background:#008751;color:white;padding:9px 14px;border-radius:8px;font-weight:700;cursor:pointer}.export:hover{background:#005c37}main{flex:1;width:min(1400px,94%);margin:0 auto;padding:22px 0 42px}.tabs{display:flex;gap:4px;background:#f9fafb;border:1px solid #e5e7eb;border-radius:10px 10px 0 0;overflow-x:auto}.tabs button{border:0;background:transparent;color:#6b7280;padding:13px 16px;cursor:pointer;font-weight:700;white-space:nowrap;border-bottom:3px solid transparent}.tabs button.active{color:#f58220;border-bottom-color:#f58220}.panel{background:#fff;border:1px solid #e5e7eb;border-top:0;border-radius:0 0 12px 12px;overflow:hidden;box-shadow:0 2px 8px #00000008}.toolbar{padding:15px;display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #e5e7eb;align-items:center}.search{width:100%;max-width:420px;display:flex;gap:9px;align-items:center;border:1px solid #d1d5db;border-radius:8px;padding:0 11px;color:#9ca3af}.search input{width:100%;border:0;outline:0;background:transparent;padding:10px 0}.filters{display:flex;gap:7px;overflow-x:auto}.filters button{border:1px solid #d1d5db;background:#fff;padding:8px 12px;border-radius:7px;color:#374151;cursor:pointer;white-space:nowrap}.filters button.selected{background:#1f2937;color:#fff;border-color:#1f2937}.table-wrap{overflow-x:auto}.section-head{padding:15px 18px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e5e7eb;background:#f9fafb;min-width:1100px}.section-head strong{font-size:14px}.section-head small{display:block;color:#6b7280;font-size:11px;margin-top:3px}.section-head span{font-size:11px;background:#e6f4ed;color:#005c37;font-weight:800;padding:5px 9px;border-radius:999px;white-space:nowrap}table{width:100%;border-collapse:collapse;min-width:1250px;text-align:left}th{background:#f3f4f6;color:#4b5563;font-size:10px;text-transform:uppercase;letter-spacing:.3px;padding:11px 12px;white-space:nowrap;border-bottom:1px solid #d1d5db}td{border-top:1px solid #edf0ee;padding:12px;font-size:12px;white-space:nowrap}tbody tr:hover{background:#f9fafb}td b{color:#111827}.net{color:#005c37;font-weight:800;background:#f0faf4}.ded{color:#dc2626;font-weight:700}tfoot{background:#1f2937;color:#fff;font-weight:800}tfoot td{border-top:0}footer{border-top:1px solid #e5e7eb;background:#fff;padding:16px 4%;display:flex;justify-content:space-between;color:#6b7280;font-size:11px}@media(max-width:850px){.header{padding:10px 14px}.brand strong{font-size:15px}main{width:calc(100% - 20px);padding-top:14px}.toolbar{flex-direction:column;align-items:stretch}.search{max-width:none}.filters{width:100%}footer{flex-direction:column;gap:5px}}
+/* Financial portal responsive navigation and cumulative payroll summaries */
+.header-actions{display:flex;align-items:center;gap:10px;position:relative;flex-wrap:wrap;justify-content:flex-end}
+.signed-in{font-size:12px;color:#6b7280}
+.logout{border:1px solid #d1d5db;background:#fff;color:#374151;padding:8px 11px;border-radius:8px;font-weight:700;cursor:pointer}
+.mobile-menu-toggle{display:none;border:0;background:#f58220;color:#fff;border-radius:9px;width:42px;height:42px;font-size:27px;line-height:1;font-weight:800;cursor:pointer;box-shadow:0 2px 5px #f5822033}
+.mobile-menu{position:absolute;right:0;top:calc(100% + 8px);width:min(260px,calc(100vw - 28px));background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:7px;box-shadow:0 12px 32px #0002;z-index:80;display:grid;gap:4px}
+.mobile-menu button{text-align:left;border:0;background:#fff;border-radius:8px;padding:12px;color:#1f2937;font-weight:700;cursor:pointer}
+.mobile-menu button:hover{background:#fff3e8;color:#b45309}
+.payroll-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding:16px 18px;border-bottom:1px solid #e5e7eb}
+.summary-card{min-width:0;border:1px solid #e5e7eb;border-radius:11px;padding:14px;background:#fff;display:grid;gap:8px}
+.summary-card span{font-size:11px;color:#6b7280;font-weight:700}
+.summary-card strong{font-size:clamp(15px,1.5vw,22px);color:#1f2937;overflow-wrap:anywhere}
+.summary-net{background:#f0faf4;border-color:#b9e4cd}
+.summary-net strong,.net-text{color:#005c37!important}
+.branch-total-block{padding:16px 18px 18px;border-bottom:1px solid #e5e7eb}
+.branch-total-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.branch-total-heading strong{font-size:14px;color:#111827}
+.branch-total-heading span{font-size:11px;color:#6b7280}
+.branch-total-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.branch-total-card{min-width:0;border:1px solid #e5e7eb;border-radius:10px;padding:13px;background:#fbfcfb}
+.branch-total-name{font-size:12px;font-weight:800;color:#005c37;overflow-wrap:anywhere}
+.branch-total-card>small{display:block;color:#6b7280;font-size:10px;margin:4px 0 10px}
+.branch-total-card>div:not(.branch-total-name){display:flex;justify-content:space-between;align-items:flex-start;gap:8px;padding-top:7px;margin-top:7px;border-top:1px solid #edf0ee;font-size:11px}
+.branch-total-card>div span{color:#6b7280}
+.branch-total-card>div b{text-align:right;overflow-wrap:anywhere}
+@media(max-width:850px){.header-actions{gap:7px}.signed-in{max-width:180px;overflow-wrap:anywhere}.payroll-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.branch-total-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.header{align-items:flex-start;gap:8px}.brand{min-width:0}.logo-svg{width:34px;height:34px;flex-shrink:0}.brand strong{font-size:13px}.brand span{font-size:9px;letter-spacing:.5px}.header-actions{margin-left:auto;gap:6px}.signed-in{display:none}.logout{display:none}.export{font-size:11px;padding:9px}.mobile-menu-toggle{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}.tabs{border-radius:10px;scrollbar-width:thin;scrollbar-color:#f58220 #f3f4f6}.tabs button{padding:12px 13px;font-size:12px}.payroll-summary{padding:12px;gap:8px}.summary-card{padding:11px}.summary-card strong{font-size:15px}.branch-total-block{padding:13px 12px}.branch-total-heading{align-items:flex-start;flex-direction:column;gap:4px}.branch-total-grid{grid-template-columns:minmax(0,1fr)}.section-head{min-width:900px}footer{padding:14px 12px;font-size:10px;overflow-wrap:anywhere}main{width:calc(100% - 14px)}}
+@media(min-width:601px){.mobile-menu-toggle,.mobile-menu{display:none}}
+
+/* Keep the three-dot navigation available whenever the compact layout is active, regardless of sidebar state. */
+@media(max-width:850px){
+  .header{position:sticky;top:0;z-index:100;align-items:center}
+  .header-actions{position:relative;z-index:101;flex-wrap:nowrap;min-width:max-content}
+  .mobile-menu-toggle{display:inline-flex;align-items:center;justify-content:center;position:relative;z-index:103;visibility:visible;opacity:1;flex-shrink:0}
+  .mobile-menu{display:grid;position:absolute;top:calc(100% + 8px);right:0;z-index:104;visibility:visible}
+}
+@media(min-width:601px) and (max-width:850px){
+  .signed-in{display:none}
+  .logout{display:none}
+}
+
+/* Transport schedule controls and reconciliation entry */
+.reconciliation-launch-card{width:100%;display:flex;align-items:center;gap:12px;text-align:left;margin:0 0 16px;padding:15px 16px;border:1px solid #f4b16e;border-radius:14px;background:linear-gradient(110deg,#fff7ed,#fff);color:#153a2c;cursor:pointer;box-shadow:0 3px 12px rgba(22,101,52,.07)}
+.reconciliation-launch-card:hover,.reconciliation-launch-card:focus-visible{border-color:#f58220;box-shadow:0 0 0 3px rgba(245,130,32,.18);outline:none}
+.reconciliation-launch-icon{display:grid;place-items:center;width:38px;height:38px;flex:0 0 38px;border-radius:11px;background:#f58220;color:#fff;font-size:21px;font-weight:800}
+.reconciliation-launch-copy{display:flex;flex:1;min-width:0;flex-direction:column;gap:4px}
+.reconciliation-launch-copy strong{font-size:14px}
+.reconciliation-launch-copy small{font-size:12px;color:#667085}
+.reconciliation-launch-card>b{font-size:12px;color:#b45309;white-space:nowrap}
+.transport-region-switch{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:14px}
+.transport-region-switch button{border:1px solid #d0d5dd;border-radius:10px;background:#fff;padding:10px 13px;color:#344054;font-size:12px;font-weight:700;cursor:pointer}
+.transport-region-switch button.selected{background:#008751;color:#fff;border-color:#008751;box-shadow:0 2px 7px rgba(0,135,81,.15)}
+.transport-warning,.transport-confirmation{border:1px solid #f2c078;border-radius:12px;background:#fff7ed;color:#7c2d12;padding:13px 15px;margin-bottom:14px;font-size:12px}
+.transport-warning strong,.transport-confirmation strong{display:block;font-size:13px;margin-bottom:4px}
+.transport-warning p,.transport-confirmation p{margin:0}
+.transport-confirmation{border-color:#a7d8b7;background:#effaf2;color:#14532d}
+.transport-empty{padding:18px;text-align:center;color:#667085;font-size:13px}
+.reconciliation-status{display:inline-block;border-radius:999px;background:#e7f6ec;color:#166534;padding:4px 8px;font-size:11px;font-weight:700}
+.reconciliation-note{margin:12px 0;color:#667085;font-size:12px}
+@media(max-width:520px){.reconciliation-launch-card{padding:12px;gap:9px}.reconciliation-launch-copy small{font-size:11px}.reconciliation-launch-card>b{font-size:11px}.transport-region-switch button{flex:1;min-width:135px}}
+
+/* Monthly salary entry within the transport schedule */
+.salary-entry-cell{display:flex;align-items:center;gap:6px;min-width:175px}
+.salary-entry-cell input{width:112px;min-width:90px;padding:8px 9px;border:1px solid #d0d5dd;border-radius:8px;background:#fff;color:#101828;font-size:12px}
+.salary-entry-cell input:focus{outline:2px solid rgba(245,130,32,.35);border-color:#f58220}
+.salary-save-button{border:0;border-radius:8px;padding:8px 10px;background:#f58220;color:#fff;font-size:11px;font-weight:800;cursor:pointer;white-space:nowrap}
+.salary-save-button:disabled{opacity:.45;cursor:not-allowed}
+.salary-entry-notice{margin:0 0 12px;border-radius:10px;padding:10px 12px;background:#fff7ed;color:#9a3412;border:1px solid #fed7aa;font-size:12px}
+
+
+/* Transport schedule salary editor and scan preview */
+.transport-edit-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-bottom:1px solid #eaecf0;background:#fff}
+.transport-search{display:flex;align-items:center;gap:9px;flex:1;min-width:180px;max-width:520px;border:1px solid #d0d5dd;border-radius:10px;padding:0 12px;background:#fff;color:#667085}
+.transport-search input{width:100%;min-width:0;border:0;outline:0;padding:11px 0;font:inherit;font-size:13px;color:#101828;background:transparent}
+.transport-edit-actions{display:flex;flex-wrap:wrap;gap:7px}
+.transport-action{position:relative;display:inline-flex;align-items:center;justify-content:center;border:1px solid #d0d5dd;border-radius:9px;padding:10px 12px;background:#fff;color:#344054;font-size:12px;font-weight:800;cursor:pointer;white-space:nowrap}
+.transport-action.active,.upload-action{background:#fff7ed;border-color:#fdba74;color:#9a3412}
+.camera-action{background:#008751;border-color:#008751;color:#fff}
+.transport-action input[type=file]{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;clip-path:inset(50%)}
+.transport-summary-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;padding:14px 16px;border-bottom:1px solid #eaecf0;background:#f9fafb}
+.transport-summary-cards>div{display:grid;gap:7px;min-width:0;padding:13px;border:1px solid #eaecf0;border-radius:10px;background:#fff}
+.transport-summary-cards span{font-size:11px;color:#667085;font-weight:700}
+.transport-summary-cards strong{font-size:clamp(14px,1.6vw,20px);color:#101828;overflow-wrap:anywhere}
+.transport-scan-status{margin:12px 16px;padding:12px;border-radius:10px;background:#eff6ff;color:#1d4ed8;font-size:12px}
+.bulk-preview-panel{margin:14px 16px 18px;padding:14px;border:1px solid #f3bd83;border-radius:14px;background:#fffdf9;box-shadow:0 3px 12px #1018280a}
+.bulk-preview-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+.bulk-preview-heading>div{display:grid;gap:4px;min-width:0}
+.bulk-preview-heading strong{font-size:15px;color:#101828}
+.bulk-preview-heading small{font-size:11px;color:#667085;overflow-wrap:anywhere}
+.scan-preview-image{display:block;width:min(100%,620px);max-height:320px;object-fit:contain;object-position:left center;margin:8px 0 12px;border:1px solid #e5e7eb;border-radius:10px;background:#f9fafb}
+.ocr-text-details{margin:10px 0;color:#475467;font-size:12px}
+.ocr-text-details summary{cursor:pointer;font-weight:700}
+.ocr-text-details pre{max-height:220px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;padding:10px;border-radius:8px;background:#f3f4f6;font-size:11px}
+.bulk-preview-warning{padding:11px 12px;border-radius:9px;background:#fff7ed;color:#9a3412;border:1px solid #fed7aa;font-size:12px;line-height:1.5}
+.bulk-preview-table{min-width:760px}
+.bulk-preview-table input{width:145px;max-width:100%;padding:9px;border:1px solid #d0d5dd;border-radius:8px;font-size:13px}
+.ocr-source-cell{max-width:260px;white-space:normal;overflow-wrap:anywhere;color:#667085;font-size:11px}
+.bulk-preview-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:12px;margin-top:8px;border-top:1px solid #fed7aa}
+.bulk-preview-footer strong{font-size:13px;color:#14532d}
+@media(max-width:720px){.transport-edit-toolbar{align-items:stretch;flex-direction:column;padding:12px}.transport-search{max-width:none;width:100%}.transport-edit-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}.transport-action{padding:10px 7px;font-size:11px;white-space:normal;text-align:center}.transport-summary-cards{grid-template-columns:repeat(2,minmax(0,1fr));padding:12px;gap:8px}.transport-summary-cards>div{padding:10px}.bulk-preview-panel{margin:12px 8px;padding:10px}.bulk-preview-heading{align-items:flex-start;flex-direction:column}.bulk-preview-footer{align-items:stretch;flex-direction:column}.bulk-preview-footer button{width:100%}}
+
+
+/* Transport and salary: persistent, mobile-friendly division selector */
+.transport-page-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 22px;margin:0 0 16px;border:1px solid #dce5e0;border-radius:16px;background:linear-gradient(135deg,#f3faf6,#fff);color:#173b2b}
+.transport-page-heading h2{margin:4px 0 6px;font-size:clamp(1.35rem,3vw,1.8rem);font-weight:800}
+.transport-page-heading p{margin:0;color:#52665c}
+.transport-page-total{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:100px;padding:12px;border-radius:12px;background:#075b3b;color:#fff}
+.transport-page-total strong{font-size:1.8rem;line-height:1.1}.transport-page-total span{font-size:.75rem}
+.transport-region-switch{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0 0 18px}
+.transport-region-switch button{display:flex;align-items:center;justify-content:center;gap:8px;min-height:54px;padding:12px 14px;border:2px solid #cbd8d0;border-radius:12px;background:#fff;color:#174b34;font-weight:800;font-size:1rem;cursor:pointer}
+.transport-region-switch button span{font-weight:600;font-size:.8rem}
+.transport-region-switch button.selected{border-color:#087747;background:#087747;color:#fff;box-shadow:0 4px 14px #075b3b22}
+@media(max-width:560px){.transport-page-heading{align-items:flex-start;padding:16px;gap:10px}.transport-page-total{min-width:76px;padding:10px}.transport-region-switch{gap:8px}.transport-region-switch button{flex-direction:column;gap:3px;min-height:64px;padding:10px 6px}.transport-page-heading p{font-size:.88rem}}
