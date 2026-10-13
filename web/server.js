@@ -26,6 +26,7 @@ if (!process.env.TERMII_SENDER_ID) throw new Error("TERMII_SENDER_ID is required
 
 const pool = new Pool({
   connectionString: databaseUrl,
+  options: "-c search_path=pwfb_salary_transport",
   ssl: process.env.PGSSLMODE === "disable" ? false : { rejectUnauthorized: false },
   max: 5,
   idleTimeoutMillis: 10000,
@@ -444,6 +445,7 @@ app.use((error, _req, res, _next) => {
 });
 
 async function start() {
+  await pool.query("CREATE SCHEMA IF NOT EXISTS pwfb_salary_transport");
   await pool.query(`
     CREATE TABLE IF NOT EXISTS pwfb_portal_users (
       id BIGSERIAL PRIMARY KEY,
